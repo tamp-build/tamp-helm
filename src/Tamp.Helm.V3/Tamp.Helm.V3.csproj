@@ -10,7 +10,12 @@
     <PackageId>Tamp.Helm.V3</PackageId>
     <Description>Tamp wrapper for the Helm v3 CLI (upgrade/template/lint/package/push). Version-pinned to Helm v3 — a sibling Tamp.Helm.V4 will ship if Helm 4 changes the surface.</Description>
     <IsPackable>true</IsPackable>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\README.md" Pack="true" PackagePath="\" />
+  </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="$(TampCorePath)" Condition="'$(TampCoreMode)' == 'project'" />
